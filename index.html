@@ -72,7 +72,10 @@
                 <td style="width:35%">
                     <select id="a1" name="a1" class="select"
                         style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
+                        <option value='통신사 선택'>개통 통신사 선택</option>
+                        <option value='SK 기기변경'>SKT 기기변경</option>
                         <option value='KT 기기변경'>KT 기기변경</option>
+                        <option value='LG 기기변경'>LGU 기기변경</option>
                     </select>
                 </td>
 
@@ -86,6 +89,17 @@
                         <option value='S22플러스'> <b>S22 플러스</b></option>
                         <option value='S22울트라'> <b>S22 울트라</b></option>
                         <option value='S22울트라_512G'> <b>S22 울트라 512G</b></option>
+                        <option value='Z플립5G'> <b>갤럭시 Z플립5G (Z플립2)</b></option>
+                        <option value='Z플립3'> <b>갤럭시 Z플립3</b></option>
+                        <option value='노트20'> <b>갤럭시 노트20</b></option>
+                        <option value='노트20울트라'> <b>노트20 울트라</b></option>
+                        <option value='S21'> <b>갤럭시 S21</b></option>
+                        <option value='갤럭시점프5G'> <b>갤럭시 점프5G</b></option>
+                        <option value='갤럭시와이드5'> <b>갤럭시 와이드5</b></option>
+                        <option value='A52s'> <b>갤럭시 A52s 5G</b></option>
+                        <option value='A32'> <b>갤럭시 A32 (LTE)</b></option>    
+                        <option value='갤럭시폴더2'> <b>갤럭시 폴더2 (LTE)</b></option> 
+                        <option value='기타'> <b>기타 (추가요청사항에 입력)</b></option>       
                     </select>
                 </td>
 
@@ -184,7 +198,7 @@
                 <td><input type="text" class="iptTxt13b" maxlength="15" name="hp" id="hp" value=""
                         style="border:1px solid #c5c5c5">
                 </td>
-                <td class="title">해피콜 연락처</td>
+                <td class="title">해피콜 받을 연락처</td>
                 <td><input type="text" name="hp3" id="hp3" style="border:1px solid #c5c5c5"></td>
             </tr>
 
@@ -192,8 +206,8 @@
                 <td class="title">청소년 개통시<br> 법대 이름 /<br>주민번호 /<br>전화번호 입력</td>
                 <td><input type="text" class="iptTxt13" size="40" name="youngPeople" id="youngPeople" value=""
                         style="border:1px solid #c5c5c5">
-                <td class="title">부가서비스</td>
-                <td>기존 부가서비스 유지</td>
+                <td class="title">주민등록증 발급년월<br>or<br>운전면허번호</td>
+                <td><input type="text" name="a2" id="a2" style="border:1px solid #c5c5c5"></td>
 
             </tr>
 
@@ -300,6 +314,7 @@
 
         // var receipt = {};
         // var a1 = document.getElementById('a1');  //가입유형
+        // var a2 = document.getElementById('a2');  //발급일자
         // var modelSelect = document.getElementById('name');
         // var jiwonSelect = document.getElementById('callplan1');
         // var ratePlan = document.getElementById('callplan');
@@ -350,6 +365,7 @@
         //     receipt['installment'] = addRequest2.options[addRequest2.selectedIndex].value;
         //     receipt['uName'] = uname.value;
         //     receipt['socialCode'] = socialCode.value + '-' + socialCode1.value;
+        //     receipt['a2'] = a2.value;      
         //     receipt['hp'] = hp.value;
         //     receipt['hp3'] = hp3.value;
         //     receipt['youngPeople'] = youngPeople.value;
