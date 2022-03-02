@@ -295,21 +295,21 @@
             <td class="title"></td>
             <td colspan="3"><img src='https://gi.esmplus.com/haghyman1/b.jpg' /></td>
                 </tr>
-            <tr> 	<td class="title">고객구분</td>
-                    <td style="width:45%"> 개인(일반)</td>
-                    <td class="title">본인인증</td>
-                    <td style="width:45%"> 신용카드 (체크카드 인증 불가)</td>
+            <tr> 	<td class="title">▶고객 구분</td>
+                    <td style="width:35%"> 개인 (일반)</td>
+                    <td class="title">▶본인 인증 방법</td>
+                    <td style="width:35%"> 신용카드 (체크카드 인증 불가)</td>
                 </tr> 
                 
                 <tr>
-                    <td class="title"> 카드사명 </td>
+                    <td class="title"> ▶카드사명 </td>
                     <td colspan="3">
                         <input type="text" maxlength="10" size="9" name="card0" id="card0" style="border:1px solid #c5c5c5" value="">
                      </td>
                 </tr>
                 
                 <tr>
-                    <td class="title"> 카드번호 </td>
+                    <td class="title"> ▶카드번호 </td>
                     <td colspan="3">
                         <input type="password" maxlength="5" size="10" name="card1" id="card1" style="border:1px solid #c5c5c5" value="">  -  
                         <input type="password" maxlength="5" size="10" name="card2" id="card2" style="border:1px solid #c5c5c5" value="">  -  
@@ -318,7 +318,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="title"> 유효년월 </td>
+                    <td class="title"> ▶유효년월 </td>
                     <td colspan="3">
                         <input type="text" maxlength="4" size="5" name="card5" id="card5" style="border:1px solid #c5c5c5" value=""> 월/ 
                          <input type="text" maxlength="4" size="5" name="card6" id="card6" style="border:1px solid #c5c5c5" value=""> 년     ※ MM/YY  
@@ -326,7 +326,7 @@
                 </tr>
                 <tr> 	
                                  
-                     <td class="title"> 변경 전 통신사</td>
+                     <td class="title"> ▶변경 전 통신사</td>
                     <td>
                    <select name="b1" id="b1" class="select" style="width:200px; height:24px; margin-left:3px; margin-top:3px; margin-bottom:3px style="border:1px solid #c5c5c5;"> 
                     <option>선택하세요</option>      
@@ -360,7 +360,7 @@
                     <option value="기타(추가요청사항기재)" >기타 통신사에 입력</option>  
                     </select>
 
-                    <td class="title">기타 통신사</td>
+                    <td class="title">▶기타 통신사(목록에 없는 경우)</td>
                     <td> <input type="text" name="b2" id="b2" size="20" style="border:1px solid #c5c5c5">
                     </td>
 
@@ -368,7 +368,7 @@
                    </td>  
                </tr>
                <tr>
-                   <td class="title">번호이동 신청정보 <br> (현사용 이동통신사 정보 입력)</td>
+                   <td class="title">▶번호이동 신청정보 <br> (현사용 이동통신사 정보 입력)</td>
                      <td>
                      <select name="b3" id="b3" class="select" style="width:200px; height:24px; margin-left:3px; margin-top:3px; margin-bottom:3px style="border:1px solid #c5c5c5;">     
                       <option selected="selected">선택하세요</option>  
@@ -378,39 +378,42 @@
                       <option value="지로" >지로납부</option>   
                         </select>
                    </td> 
-                     <td class="title">뒷 번호 4자리</td> 
+                     <td class="title">▶뒷 번호 4자리</td> 
                     <td>
                    <input type="text" class="b4" size="20" maxlength="10" name="b4" id="b4" value="" onKeyUp="return autoTab(this, 4, event);"/> 
                     </td>
                </tr>	
                 <tr> 
-                    <td class="title">번호이동 인증정보 <br> 주의사항</td>
+                    <td class="title">▶번호이동 인증정보 <br> 주의사항</td>
                     <td colspan="3">  <img src="https://gi.esmplus.com/haghyman1/html1.jpg" style="margin-top:10px"> 
                     </td>
                </tr>
                <tr>
-                <td class="title">자동이체 신청</td> 
+                <td class="title">▶자동이체 신청</td> 
                <td colspan="3"> 
               <input type="radio" name="b5" id="b5" value="은행자동이체" CHECKED />은행자동이체
               <input type="radio" name="b5" id="b5" value="신용카드납부" />신용카드납부
               </td>	
               <tr> 
-                  <td class="title">은행명 or 카드사</td> 
+                  <td class="title">▶은행명 or 카드사</td> 
                  <td >  
               <input type="text" class="iptTxt13" size="20" name="b6" id="b6"  style="border:1px solid #c5c5c5" value=""/> 
                </td>
-                <td class="title">계좌번호 or <br> 카드번호(유효월년)</td>
+                <td class="title">▶계좌번호 or <br> 카드번호(유효월년)</td>
                 <td >  <input type="text" class="iptTxt13" size="20" name="b7" id="b7"  style="border:1px solid #c5c5c5" value=""/> </td>
           </tr>
           
-          <tr>	  <td class="title">예금주 or 카드주</td>
+          <tr>	  <td class="title">▶예금주 or 카드주</td>
                 <td>  <input type="text" class="iptTxt13" size="20" maxlength="5" name="b8" id="b8"  style="border:1px solid #c5c5c5" value=""/>  
               </td>
           
-                <td class="title">가입자와의 관계</td> 
+                <td class="title">▶가입자와의 관계</td> 
                <td> 본인  </td>
           </tr>
-
+          <tr>
+            <td class="title"></td>
+            <td colspan="3"><img src='https://gi.esmplus.com/haghyman1/b1.jpg' /></td>
+                </tr>
                 </table>     
 
 
