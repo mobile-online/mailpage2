@@ -76,6 +76,9 @@
                         <option value='SK 기기변경'>SKT 기기변경</option>
                         <option value='KT 기기변경'>KT 기기변경</option>
                         <option value='LG 기기변경'>LGU 기기변경</option>
+                        <option value='SK 번이'>SK 번호이동 (현재 사용하는 번호로 통신사이동)</option>
+                        <option value='KT 번이'>KT 번호이동 (현재 사용하는 번호로 통신사이동)</option>
+                        <option value='LG 번이'>LG 번호이동 (현재 사용하는 번호로 통신사이동)</option>
                     </select>
                 </td>
 
@@ -129,11 +132,15 @@
                     <select id="callplan" name="callplan" class="select"
                         style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
                         <option value='요금제선택'>요금제 선택</option>
-                        <option value='슈퍼플랜베이직'>슈퍼플랜베이직 (월 80,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한</option>
-                        <option value='베이직초이스(디즈니)'>베이직 초이스 디즈니 (월 90,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한, 디즈니기본제공
+                        <option value='KT슈퍼플랜베이직'>[KT] 슈퍼플랜베이직 (월 80,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한</option>
+                        <option value='KT베이직초이스(디즈니)'>[KT] 베이직 초이스 디즈니 (월 90,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한, 디즈니기본제공
                             (디즈니+계정등록필수! 미인증시 9900원 부과)</option>
-                        <option value='베이직초이스(넷플릭스)'>베이직 초이스 넷플릭스 (월 90,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한, 넷플기본제공
+                        <option value='KT베이직초이스(넷플릭스)'>[KT] 베이직 초이스 넷플릭스 (월 90,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한, 넷플기본제공
                             (넷플릭스 계정등록필수! 미인증시 9500원 부과)</option>
+                        <option value='SK 5GX프라임'>[SK] 5GX 프라임 (월 89,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한</option>
+                        <option value='SK T플랜 세이브'>[SK] LTE T플랜 세이브 (월 33,000원) / 유무선,문자무제한 (영상,부가100분), 1.5GB</option>
+                        <option value='LG '>[LGU] 5G 프리미어 레귤러 (월 95,000원) / 유무선,문자무제한 (영상,부가300분), 데이터완전무제한, 프리미어약정할인(요금제 하향시 위약금 발생주의)</option>
+                        <option value='기타 요금제'>기타 요금제 (추가요청사항에 입력)</option>
                     </select>
                 </td>
 
@@ -167,10 +174,22 @@
                     <select id="addRequest2" name="addRequest2" class="select"
                         style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
                         <option value='미가입'> 미가입 </option>
-                        <option value='갤럭시케어Lite(6,400)S22전용'>S22전용 [갤럭시케어 Lite] 월 6,400원 / 분실,파손보장한도 최대120만원, 보장기간 36개월
+                        <option value='KT 갤럭시케어Lite(6,400)S22전용'>KT S22전용 [갤럭시케어 Lite] 월 6,400원 / 분실,파손보장한도 최대120만원, 보장기간 36개월
                             / 자기부담금: 분실파손30만원, 파손14만원 </option>
-                        <option value='갤럭시케어Lite분실(3,600)S22전용'>S22전용 [갤럭시케어 Lite 분실] 월 3,600원 / 분실한도 최대120만원, 보장기간 36개월
+                        <option value='KT 갤럭시케어Lite분실(3,600)S22전용'>KT S22전용 [갤럭시케어 Lite 분실] 월 3,600원 / 분실한도 최대120만원, 보장기간 36개월
                             / 자기부담금: 30만원</option>
+                        <option value='SK T ALL케어플러스2 플립(10,900)Z플립전용'>SK Z플립전용 [T ALL케어플러스2 플립] 월 10,900원 / 보장기간 36개월
+                                / 자기부담금: 분실35만,파손13만원,배터리2만 </option>
+                        <option value='SK T ALL케어플러스2 고급(8,000)100만원초과'>SK 출고가100만원 초과 [T ALL케어플러스2 고급] 월 8,000원 / 보장기간 36개월
+                                    / 자기부담금: 분실35만,파손10만원,배터리2만 </option>
+                        <option value='SK T ALL케어플러스2 일반(6,000)100만원이하'>SK 출고가100만원 이하 [T ALL케어플러스2 일반] 월 6,000원 / 보장기간 36개월
+                                        / 자기부담금: 분실15만,파손6만원,배터리2만 </option>
+                        <option value='SK T ALL케어플러스2 파손형F(8,200)'>SK Z플립,폴드 전용 [T ALL케어플러스2 파손형F] 월 8,200원 / 보장기간 36개월
+                                            / 자기부담금: 완전파손35만,파손15만원,배터리2만 </option>
+                        <option value='SK T ALL케어플러스2 파손(5,200)'>SK [T ALL케어플러스2 파손] 월 5,200원 / 보장기간 36개월
+                                            / 자기부담금: 파손8만원,배터리2만 </option>
+                        <option value='기타 휴대폰보험 문의'>기타 휴대폰 보험 문의 (추가요청사항에 입력) </option>
+                        
                     </select>
                 </td>
             </tr>
@@ -206,7 +225,7 @@
                 <td class="title">청소년 개통시<br> 법대 이름 /<br>주민번호 /<br>전화번호 입력</td>
                 <td><input type="text" class="iptTxt13" size="40" name="youngPeople" id="youngPeople" value=""
                         style="border:1px solid #c5c5c5">
-                <td class="title">주민등록증 발급년월<br>or<br>운전면허번호</td>
+                <td class="title">주민등록증<br>발급년월 or<br>운전면허번호</td>
                 <td><input type="text" name="a2" id="a2" style="border:1px solid #c5c5c5"></td>
 
             </tr>
@@ -241,10 +260,9 @@
             </tr>
         </table>
 
-
         <table width="100%">
             <tr>
-                <td class="title">구비서류<br>접수방법</td>
+                <td class="title">청소년서류<br>접수방법</td>
                 <td style="width:85%">
                        <input name="paper_method" type="radio" value="email" /> 이메일첨부 samocompany1@naver.com
                 </td>
@@ -266,10 +284,134 @@
             </tr> -->
 
             <tr name="btr" id="btr">
-                <td class="title">주의사항</td>
+                <td class="title">필요 서류</td>
                 <td><img src='https://gi.esmplus.com/haghyman1/kt.jpg' /></td>
             </tr>
         </table>
+
+        <table width="100%">
+            <tr>번호이동 (사용번호 그대로 통신사이동) 개통 고객님만 입력 / 기기변경시 입력 X</tr>
+            <tr> 	<td class="title">고객구분</td>
+                    <td style=" width:35%"> 개인(일반)</td>
+                    <td class="title">본인인증</td>
+                    <td style=" width:35%"> 신용카드 (체크카드 인증 불가)</td>
+                </tr> 
+                
+                <tr>
+                    <td class="title"> 카드사명 </td>
+                    <td colspan="3">
+                        <input type="text" maxlength="10" size="9" name="card0" id="card0" style="border:1px solid #c5c5c5" value="">
+                     </td>
+                </tr>
+                
+                <tr>
+                    <td class="title" style="width:15%"> 카드번호 </td>
+                    <td colspan="3">
+                        <input type="password" maxlength="5" size="10" name="card1" id="card1" style="border:1px solid #c5c5c5" value="">  -  
+                        <input type="password" maxlength="5" size="10" name="card2" id="card2" style="border:1px solid #c5c5c5" value="">  -  
+                        <input type="password" maxlength="5" size="10" name="card3" id="card3" style="border:1px solid #c5c5c5" value="">  -  
+                        <input type="password" maxlength="5" size="10" name="card4" id="card4" style="border:1px solid #c5c5c5" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title"> 유효년월 </td>
+                    <td colspan="3">
+                        <input type="text" maxlength="4" size="5" name="card5" id="card5" style="border:1px solid #c5c5c5" value=""> 월/ 
+                         <input type="text" maxlength="4" size="5" name="card6" id="card6" style="border:1px solid #c5c5c5" value=""> 년     ※ MM/YY  
+                    </td>
+                </tr>
+                <tr> 	
+                                 
+                     <td class="title"> 변경 전 통신사</td>
+                    <td>
+                   <select name="b1" id="b1" class="select" style="width:200px; height:24px; margin-left:3px; margin-top:3px; margin-bottom:3px style="border:1px solid #c5c5c5;"> 
+                    <option>선택하세요</option>      
+                   <option value="SK" >SK</option>      
+                   <option value="KT" >KT</option> 
+                   <option value="LGU" >LGU</option>   
+                      <option value="SK텔링크" >SK텔링크 7모바일</option>    
+                     <option value="T브로드" >T브로드</option>   
+                      <option value="T플러스" >T플러스</option>  
+                      <option value="CJ헬로모바일(KT)" >CJ헬로모바일(KT)</option>    
+                     <option value="CJ헬로모바일(SK)" >CJ헬로모바일(SK)</option>    
+                        <option value="Umobi" >Umobi</option>  
+                       <option value="스노우맨" >스노우맨</option>  
+                       <option value="플러스모바일" >플러스모바일</option>  
+                       <option value="에버그린" >에버그린</option>   
+                      <option value="에넥스텔레콤SK망" >에넥스텔레콤(SK)</option>  
+                      <option value="에넥스텔레콤KT망" >에넥스텔레콤(KT)</option> 
+                       <option value="M모바일" >M모바일</option> 
+                        <option value="에스원NET" >에스원NET</option>     
+                    <option value="아이즈모바일" >아이즈모바일</option>     
+                     <option value="에스원NET(KT)" >에스원NET(KT)</option>   
+                      <option value="에스원NET(SK)" >에스원NET(SK)</option>    
+                     <option value="프리텔레콤(SK)" >프리텔레콤(SK)</option>   
+                     <option value="프리텔레콤(KT)" >프리텔레콤(KT)</option>   
+                     <option value="프리티" >프리티</option>   
+                      <option value="머천드" >머천드</option>   
+                      <option value="이마트(SK)" >이마트(SK)</option>   
+                      <option value="이마트(LG)" >이마트(LG)</option>   
+                      <option value="홈플러스(LG)" >홈플러스(LG)</option>   
+                      <option value="홈플러스(KT)" >홈플러스(KT)</option>   
+                    <option value="기타(추가요청사항기재)" >기타 통신사에 입력</option>  
+                    </select>
+
+                    <td class="title">기타 통신사</td>
+                    <td> <input type="text" name="b2" id="b2" size="40" style="border:1px solid #c5c5c5">
+                    </td>
+
+
+                   </td>  
+               </tr>
+               <tr>
+                   <td class="title">번호이동 신청정보 <br> (현사용 이동통신사 정보 입력)</td>
+                     <td>
+                     <select name="b3" id="b3" class="select" style="width:200px; height:24px; margin-left:3px; margin-top:3px; margin-bottom:3px style="border:1px solid #c5c5c5;">     
+                      <option selected="selected">선택하세요</option>  
+                        <option value="단말기" >단말기 일련번호</option>   
+                        <option value="은행계좌" >은행 계좌번호</option>    
+                       <option value="신용카드" >신용카드 번호</option>      
+                      <option value="지로" >지로납부</option>   
+                        </select>
+                   </td> 
+                     <td class="title">뒷 번호 4자리</td> 
+                    <td>
+                   <input type="text" class="b4" size="20" maxlength="10" name="b4" id="b4" value="" onKeyUp="return autoTab(this, 4, event);"/> 
+                    </td>
+               </tr>	
+                <tr> 
+                    <td class="title">번호이동 인증정보 <br> 주의사항</td>
+                    <td colspan="3">  <img src="https://gi.esmplus.com/haghyman1/html1.jpg" style="margin-top:10px"> 
+                    </td>
+               </tr>
+               <tr>
+                <td class="title">자동이체 신청</td> 
+               <td colspan="3"> 
+              <input type="radio" name="b5" id="b5" value="은행자동이체" CHECKED />은행자동이체
+              <input type="radio" name="b5" id="b5" value="신용카드납부" />신용카드납부
+              </td>	
+              <tr> 
+                  <td class="title">은행명 or 카드사</td> 
+                 <td >  
+              <input type="text" class="iptTxt13" size="20" name="b6" id="b6"  style="border:1px solid #c5c5c5" value=""/> 
+               </td>
+                <td class="title">계좌번호 or <br> 카드번호(유효월년)</td>
+                <td >  <input type="text" class="iptTxt13" size="35" name="b7" id="b7"  style="border:1px solid #c5c5c5" value=""/> </td>
+          </tr>
+          
+          <tr>	  <td class="title">예금주 or 카드주</td>
+                <td>  <input type="text" class="iptTxt13" size="20" maxlength="5" name="b8" id="b8"  style="border:1px solid #c5c5c5" value=""/>  
+              </td>
+          
+                <td class="title">가입자와의 관계</td> 
+               <td> 본인  </td>
+          </tr>
+
+                </table>     
+
+
+
+        </table>   
 
         </div>
 
@@ -332,6 +474,21 @@
         // var sendRequest = document.getElementById('addRequest1'); //배송요청
         // var excepter = document.getElementById('rname'); //수령인
         // var excepterNumber = document.getElementById('rhp'); //연락처
+        // var card0 = document.getElementById('card0');  
+        // var card1 = document.getElementById('card1');  
+        // var card2 = document.getElementById('card2'); 
+        // var card3 = document.getElementById('card3'); 
+        // var card4 = document.getElementById('card4'); 
+        // var card5 = document.getElementById('card5'); 
+        // var card6 = document.getElementById('card6'); 
+        // var b1 = document.getElementById('b1'); 
+        // var b1 = document.getElementById('b2'); 
+        // var b1 = document.getElementById('b3'); 
+        // var b1 = document.getElementById('b4'); 
+        // var b1 = document.getElementById('b5'); 
+        // var b1 = document.getElementById('b6'); 
+        // var b1 = document.getElementById('b7');
+        // var b1 = document.getElementById('b8');  
 
         // var file1 = document.getElementById('b_file1'); //연락처
         // var file2 = document.getElementById('b_file2'); //연락처
@@ -373,6 +530,21 @@
         //     receipt['sendRequest'] = sendRequest.value;
         //     receipt['excepter'] = excepter.value;
         //     receipt['excepterNumber'] = excepterNumber.value;
+        //     receipt['card0'] = card0.value;
+        //     receipt['card0'] = card0.value;
+        //     receipt['card0'] = card0.value;
+        //     receipt['card0'] = card0.value;
+        //     receipt['card0'] = card0.value;
+        //     receipt['card0'] = card0.value;
+        //     receipt['card0'] = card0.value;
+        //     receipt['b1'] = b1.value;
+        //     receipt['b2'] = b2.value;
+        //     receipt['b3'] = b3.value;
+        //     receipt['b4'] = b4.value;
+        //     receipt['b5'] = b5.value;
+        //     receipt['b6'] = b6.value;
+        //     receipt['b7'] = b7.value;
+        //     receipt['b8'] = b8.value;
         // }
     </script>
 </body>
