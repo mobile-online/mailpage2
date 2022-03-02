@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset-"UTF-8">
+    </meta>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src='./index.js'></script>
+</head>
+
+<title>k-note.com</title>
+
+<style>
+    table {
+        width: 950px;
+        border: 2px solid #eee9e6;
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-family: 'Malgun Gothic';
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        font-family: 'Malgun Gothic';
+        border: 1px solid #eee9e6;
+        padding: 10px;
+    }
+
+    .title {
+        font-family: 'Malgun Gothic';
+        letter-spacing: -1px;
+        color: #505050;
+    }
+
+    .span {
+        font-family: 'Malgun Gothic';
+    }
+
+    .P {
+        font-family: 'Malgun Gothic';
+    }
+
+    th:nth-child(2n),
+    td:nth-child(2n) {
+        background-color: #ffffff;
+    }
+
+    th:nth-child(2n+1),
+    td:nth-child(2n+1) {
+        background-color: #faf6ed;
+    }
+</style>
+
+<body>
+
+    <div style="text-align:center;padding-bottom:0px;padding-top:5px;color:#FFFFFF;font-size:14px;font-weight:bold">
+
+        <img src='https://gi.esmplus.com/haghyman1/kt1.jpg' />
+    </div>
+
+    //https://netcorecloud.com/tutorials/how-to-send-emails-with-javascript/
+
+    <form class="gform" id="gform" method="POST" enctype="multipart/form-data" data-email="samocomany@gmail.com"
+        action="https://script.google.com/macros/s/AKfycbyaSsXy1Tda8kG2TzEgqsK4KUDLztjqXWqIM8_W/exec">
+
+        <table width="100%">
+            <tr>
+                <td class="title">가입유형</td>
+
+                <td style="width:35%"><b> 기기변경 </b></td>
+
+                <td class="title">신청상품 </td>
+
+                <td style="width:35%">
+                    <select id="name" name="name" class="select"
+                        style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
+                        <option value='단말기'> <b>신청 단말기 선택</b></option>
+                        <option value='S22'> <b>갤럭시 S22</b></option>
+                        <option value='S22플러스'> <b>S22 플러스</b></option>
+                        <option value='S22울트라'> <b>S22 울트라</b></option>
+                        <option value='S22울트라_512G'> <b>S22 울트라 512G</b></option>
+                    </select>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="title">약정, 할부기간</td>
+
+                <td><b>24개월 </b></td>
+
+                <td class="title">지원금종류</td>
+
+                <td>
+                    <select id="callplan1" name="callplan1" class="select"
+                        style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
+                        <option value='지원금선택'> <b>선택하세요</b></option>
+                        <option value='선택약정할인'> <b>요금 25% 할인 (선택약정할인)</b></option>
+                        <option value='공시지원금'> <b>단말기 지원금 할인 (공시지원금할인)</b></option>
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td class="title">요금제 선택</td>
+                <td>
+                    <select id="callplan" name="callplan" class="select"
+                        style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
+                        <option value='요금제'>요금제 선택</option>
+                        <option value='슈퍼플랜베이직'>슈퍼플랜베이직 (월 80,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한</option>
+                        <option value='베이직초이스(디즈니)'>베이직 초이스 디즈니 (월 90,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한, 디즈니기본제공
+                            (디즈니+계정등록필수! 미인증시 9900원 부과)</option>
+                        <option value='베이직초이스(넷플릭스)'>베이직 초이스 넷플릭스 (월 90,000원) / 유무선,문자무제한 (영상,부가300분), 데이터 완전무제한, 넷플기본제공
+                            (넷플릭스 계정등록필수! 미인증시 9500원 부과)</option>
+                    </select>
+                </td>
+
+                <td class="title">USIM구매</td>
+                <td>
+                    <select id="hpcolor" name="hpcolor" class="select"
+                        style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
+                        <option value='재사용'> 기존유심 재사용 (나노유심) </option>
+                        <option value='구매'> 새유심 구매 (7,700원 익월납)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td class="title">색상 입력</td>
+
+                <td>
+                    <input type="text" class="iptTxt13b" maxlength="20" name="handset" id="handset" value=""
+                        style="border:1px solid #c5c5c5">
+                </td>
+
+                <td class="title">추가 요청사항</td>
+                <td> <input type="text" name="addRequest" id="addRequest" size="40" style="border:1px solid #c5c5c5">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="title">보험가입여부</td>
+                <td colspan="3">
+                    <select id="addRequest2" name="addRequest2" class="select"
+                        style="border:1px solid #c5c5c5;width:98%;overflow-x:hidden;height:24px;font-size:13px;font-family: 'Malgun Gothic';">
+                        <option value='미가입'> 미가입 </option>
+                        <option value='갤럭시케어Lite(6,400)S22전용'>S22전용 [갤럭시케어 Lite] 월 6,400원 / 분실,파손보장한도 최대120만원, 보장기간 36개월
+                            / 자기부담금: 분실파손30만원, 파손14만원 </option>
+                        <option value='갤럭시케어Lite분실(3,600)S22전용'>S22전용 [갤럭시케어 Lite 분실] 월 3,600원 / 분실한도 최대120만원, 보장기간 36개월
+                            / 자기부담금: 30만원</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="title">이름</td>
+                <td style="width:35%">
+                    <input type="text" class="iptTxt13b" maxlength="20" name="uname" id="uname" value=""
+                        style="border:1px solid #c5c5c5">
+                </td>
+
+                <td class="title">주민등록번호</td>
+                <td>
+                    <input type="password" size="15" class="iptTxt13b" maxlength="6" name="birth" id="birth" value=""
+                        style="border:1px solid #c5c5c5" onKeyUp="return autoTab(this, 6, event);" /> -
+                    <input type="password" size="15" class="iptTxt13b" maxlength="7" name="birth1" id="birth1" value=""
+                        style="border:1px solid #c5c5c5" onKeyUp="return autoTab(this, 6, event);" />
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="title">개통 휴대폰번호</td>
+                <td><input type="text" class="iptTxt13b" maxlength="11" name="hp" id="hp" value=""
+                        style="border:1px solid #c5c5c5">
+                </td>
+                <td class="title">해피콜 연락처</td>
+                <td><input type="text" name="hp3" id="hp3" style="border:1px solid #c5c5c5"></td>
+            </tr>
+
+            <tr>
+                <td class="title">청소년 개통시<br> 법대 이름 /<br>주민번호 /<br>전화번호 입력</td>
+                <td><input type="text" class="iptTxt13" size="45" name="email" id="email" value=""
+                        style="border:1px solid #c5c5c5">
+                <td class="title">부가서비스</td>
+                <td>기존 부가서비스 유지</td>
+
+            </tr>
+
+            <tr>
+                <td class="title">배송지 주소</td>
+                <td colspan="3">
+                    <input type="text" size="100" name="adress" id="adress" value="" style="border:1px solid #c5c5c5">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="title">배송 요청사항</td>
+                <td colspan="3"> <input type="text" size="100" name="addRequest1" id="addRequest1"
+                        style="border:1px solid #c5c5c5">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="title">수령인</td>
+                <td style="width:35%">
+                    <input type="text" class="iptTxt13b" maxlength="40" name="rname" id="rname" value=""
+                        style="border:1px solid #c5c5c5">
+                </td>
+
+                <td class="title" style="width:135px">배송지 연락처</td>
+
+                <td>
+                    <input type="text" class="iptTxt13b" maxlength="40" name="rhp" id="rhp" value=""
+                        style="border:1px solid #c5c5c5">
+                </td>
+            </tr>
+        </table>
+
+
+        <table width="100%">
+            <tr>
+                <td class="title">구비서류<br>접수방법</td>
+                <td style="width:85%">
+                    <input name="paper_method" type="radio" checked="checked" value="file" /> 파일첨부
+                    <input name="paper_method" type="radio" value="email" /> 이메일
+                </td>
+                <!-- onClick="return selectAttach(this.value)" -->
+            </tr>
+
+            <!-- <tr name="btr" id="btr">
+                <td class="title">파일첨부1</td>
+
+                <td><input type="file" name="b_file1" id="b_file1" value="" style="width:90%"></td>
+            </tr>
+            <tr name="btr" id="btr1">
+                <td class="title">파일첨부2</td>
+                <td><input type="file" name="b_file2" id="b_file2" style="width:90%"></td>
+            </tr>
+            <tr name="btr" id="btr2">
+                <td class="title">파일첨부3</td>
+                <td><input type="file" name="b_file3" id="b_file3" style="width:90%"></td>
+            </tr> -->
+
+            <tr name="btr" id="btr">
+                <td class="title">주의사항</td>
+                <td><img src='https://gi.esmplus.com/haghyman1/kt.jpg' /></td>
+            </tr>
+        </table>
+
+        </div>
+
+        <table width="100%">
+            <tr>
+                <td class="title">필수 안내 사항</td>
+                <td style="width:85%">
+
+                    <div
+                        style="font-family: 'Malgun Gothic';width:97%;font-size:13px; height:110px; margin:5 0px; overflow-y:scroll; border:1px #e5e5e5 solid; padding:10px;">
+                        <b>※ 필수 회선 유지기간 / 필수사용 요금제 유지기간 미이행시 할인받은 금액 전부 청구됩니다. ※</b></br>
+                        1. <b>신청하시기 전에 현재 사용중인 통신사에 위약금이 청구가 되는지, 잔여 할부가 남아있는 지 꼭 확인해주세요. </b><br />
+                        2. <b>이전 통신사의 위약금, 할부금은 확인 불가능합니다. 개통전에 국번없이114 해당 통신사고객센터로 직접 확인바랍니다.</b><br />
+                        3. 의무사용기간은 개통달 포함 7개월입니다. 통신사이동, 기기변경, 명의변경, 정지시 할인받은 금액 전액 청구됩니다.<br />
+                        4. 폰파라치 신고 목적으로 위장가입하는 경우 당사에 과징금 및 손해를 입혔을 시 이에 상응하는 피해금액을 청구합니다.<br />
+                        5. 복지할인, 결합할인등은 개통 후 14일 이내 114 고객센터로 문의, 가까운 대리점 내방 후 직접 등록 처리하셔야 합니다.<br />
+                        신청서 전송 시 본인은 위 내용을 숙지하였으며, 이에 동의했음으로 개통진행됩니다.
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div style="height:30px; ">
+        </div>
+
+        <center>
+            <input type="image" src="https://gi.esmplus.com/haghyman1/botten.jpg" alt="가입신청 작성완료" onclick="sendEmail()">
+            </div>
+        </center>
+        <div style="height:50px;">
+        </div>
+
+        </br></br>
+    </form>
+
+
+    <script data-cfasync="false" type="text/javascript"
+        src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+
+
+    <script>
+
+        // var receipt = {};
+        // var modelSelect = document.getElementById('name');
+        // var jiwonSelect = document.getElementById('callplan1');
+        // var ratePlan = document.getElementById('callplan');
+        // var usimSelect = document.getElementById('hpcolor');
+        // var color = document.getElementById('handset');
+        // var addRequest = document.getElementById('addRequest');
+        // var installment = document.getElementById('addRequest2');
+        // var uname = document.getElementById('uname');
+        // var socialCode = document.getElementById('birth');
+        // var socialCode1 = document.getElementById('birth1');
+        // var hp = document.getElementById('hp');  //전번
+        // var hp3 = document.getElementById('hp3'); //해피콜
+        // var youngPeople = document.getElementById('email'); //법대
+        // var adress = document.getElementById('adress'); //주소
+        // var sendRequest = document.getElementById('addRequest1'); //배송요청
+        // var excepter = document.getElementById('rname'); //수령인
+        // var excepterNumber = document.getElementById('rhp'); //연락처
+
+        // var file1 = document.getElementById('b_file1'); //연락처
+        // var file2 = document.getElementById('b_file2'); //연락처
+        // var file3 = document.getElementById('b_file3'); //연락처
+
+        function sendEmail() {
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "samocomany@gmail.com",
+                Password: "ansrb0311!!",
+                To: 'ehdghkrj@naver.com',
+                From: "samocomany@gmail.com",
+                Subject: 'emailSubject',
+                Body: 'd',
+
+            }).then(
+                message => alert("mail sent successfully")
+            );
+        }
+
+
+        // function sayhi() {
+        //     receipt['model'] = modelSelect.options[modelSelect.selectedIndex].value;
+        //     receipt['jiwon'] = jiwonSelect.options[jiwonSelect.selectedIndex].value;
+        //     receipt['ratePlan'] = ratePlan.options[ratePlan.selectedIndex].value;
+        //     receipt['usim'] = usimSelect.options[usimSelect.selectedIndex].value;
+        //     receipt['color'] = color.value;
+        //     receipt['adReq'] = addRequest.value;
+        //     receipt['installment'] = addRequest2.options[addRequest2.selectedIndex].value;
+        //     receipt['uName'] = uname.value;
+        //     receipt['socialCode'] = socialCode.value + '-' + socialCode1.value;
+        //     receipt['hp'] = hp.value;
+        //     receipt['hp3'] = hp3.value;
+        //     receipt['youngPeople'] = youngPeople.value;
+        //     receipt['adress'] = adress.value;
+        //     receipt['sendRequest'] = sendRequest.value;
+        //     receipt['excepter'] = excepter.value;
+        //     receipt['excepterNumber'] = excepterNumber.value;
+        // }
+    </script>
+</body>
+
+</html>
