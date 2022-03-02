@@ -61,6 +61,8 @@
         <img src='https://gi.esmplus.com/haghyman1/kt1.jpg' />
     </div>
 
+    //https://netcorecloud.com/tutorials/how-to-send-emails-with-javascript/
+
     <form class="gform" id="gform" method="POST" enctype="multipart/form-data" data-email="samocomany@gmail.com"
         action="https://script.google.com/macros/s/AKfycbyaSsXy1Tda8kG2TzEgqsK4KUDLztjqXWqIM8_W/exec">
 
@@ -175,7 +177,7 @@
 
             <tr>
                 <td class="title">개통 휴대폰번호</td>
-                <td><input type="text" class="iptTxt13b" maxlength="15" name="hp" id="hp" value=""
+                <td><input type="text" class="iptTxt13b" maxlength="11" name="hp" id="hp" value=""
                         style="border:1px solid #c5c5c5">
                 </td>
                 <td class="title">해피콜 연락처</td>
@@ -328,7 +330,7 @@
                 Body: 'd',
 
             }).then(
-                message => alert("신청이 완료되었습니다. 영업시간내 전화드립니다(평일10시~7시)")
+                message => alert("신청서 접수완료. 영업시간내 전화드립니다.(평일10시~7시)")
             );
         }
 
